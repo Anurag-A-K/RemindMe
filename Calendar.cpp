@@ -72,7 +72,17 @@ struct node* newNode(int data)
      node->right = NULL;
      return(node);
 }
-
+void prettyPrintDate(int day, int month, int year, char format[3]) {
+    if(format == "USA") {
+        cout << month << ":" << day << ":" << year;
+    }
+    else if(format == "ASI") {
+        cout << day << ":" << month << ":" << year;
+    }
+    else {
+        cout << "NaN";
+    }
+}
 void printPostorder(struct node* node)
 {
      if (node == NULL)
